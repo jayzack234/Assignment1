@@ -1,0 +1,23 @@
+﻿<!--Layout to act as basic template for each page-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link rel="icon" href="~/img/z-letter_53876-60370.jpg" type="image/icon type">
+</head>
+<body>
+    <header><h1>@ViewBag.H1</h1></header>
+    <menu>
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="Grader">Grader</a></li>
+        </ul>
+    </menu>
+    @RenderBody()
+    <footer>Copyright 2021</footer>
+</body>
+
+<script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="~/js/test.js"></script>
+</html>

@@ -1,10 +1,10 @@
-﻿var submit = document.getElementById("submitButton");
-
-submit.addEventListener("click", function () {
-    var x = ((parseFloat(document.getElementById("Assignments").value) * .5) + (parseFloat(document.getElementById("Group_Projects").value) * .1)
-        + (parseFloat(document.getElementById("Quizzes").value) * .1) + (parseFloat(document.getElementById("Exams").value) * .2)
-        + (parseFloat(document.getElementById("INTEX").value) * .1));
+﻿$('#submitButton').click(function () {
+    //x will hold the scores, the equation calculates each score based on weight
+    var x = ((parseFloat($("#Assignments").val()) * .5) + (parseFloat($("#Group_Projects").val()) * .1)
+        + (parseFloat($("#Quizzes").val()) * .1) + (parseFloat($("#Exams").val()) * .2)
+        + (parseFloat($("#INTEX").val()) * .1));
     var letterGrade = "";
+    //the score is the determined to what letter grade, proven by a series of if statements
     if (x > 94) {
         letterGrade = "A";
     }

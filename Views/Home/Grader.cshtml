@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Grade Calculator";
+}
+
+@model Assignment1.Models.GraderModel
+
+<body>
+<h2>413 Grade Calculator</h2>
+<h4>Please enter your overall score for each grading category.</h4>
+<form method="post">
+    <label>Assignments:   </label>
+    <input id="Assignments" asp-for="Assignments" />
+    <asp:RangeValidator ID="A" runat="server" ErrorMessage="Invalid Number" SetFocusOnError="true"
+                        ControlToValidate="Assignments" Display="Dynamic" ForeColor="red" Type="Integer"
+                        MinimumValue="1" MaximumValue="50"></asp:RangeValidator>
+    <br />
+    <label>Group Projects:   </label>
+    <input id="Group_Projects" asp-for="Group_Projects" />
+    <br />
+    <label>Quizzes:   </label>
+    <input id="Quizzes" asp-for="Quizzes" />
+    <br />
+    <label>Exams:   </label>
+    <input id="Exams" asp-for="Exams" />
+    <br />
+    <label>INTEX:   </label>
+    <input id="INTEX" asp-for="INTEX" />
+    <br />
+    <input type="submit" value="Calculate" id="submitButton" />
+    <!--This makes sure that each field is filled out-->
+    <div asp-validation-summary="All"></div>
+</form>
+</body>
