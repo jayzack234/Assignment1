@@ -1,8 +1,10 @@
-﻿$('#submitButton').click(function () {
+﻿//This function executes when the submit button is clicked, it gathers the score responses to find the weighted average
+$('#submitButton').click(function () {
     //x will hold the scores, the equation calculates each score based on weight
     var x = ((parseFloat($("#Assignments").val()) * .5) + (parseFloat($("#Group_Projects").val()) * .1)
         + (parseFloat($("#Quizzes").val()) * .1) + (parseFloat($("#Exams").val()) * .2)
         + (parseFloat($("#INTEX").val()) * .1));
+    //established string to hold lettergrade
     var letterGrade = "";
     //the score is the determined to what letter grade, proven by a series of if statements
     if (x > 94) {
@@ -40,5 +42,6 @@
     }
     else { letterGrade = "F";}
 
+    //Outputs the calculated score and interpreted grade in an alert box
     alert(x + ", " + letterGrade);
 });

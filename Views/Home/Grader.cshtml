@@ -7,15 +7,13 @@
 
 @model Assignment1.Models.GraderModel
 
+<!--Grade calculator form-->
 <body>
 <h2>413 Grade Calculator</h2>
 <h4>Please enter your overall score for each grading category.</h4>
 <form method="post">
     <label>Assignments:   </label>
     <input id="Assignments" asp-for="Assignments" />
-    <asp:RangeValidator ID="A" runat="server" ErrorMessage="Invalid Number" SetFocusOnError="true"
-                        ControlToValidate="Assignments" Display="Dynamic" ForeColor="red" Type="Integer"
-                        MinimumValue="1" MaximumValue="50"></asp:RangeValidator>
     <br />
     <label>Group Projects:   </label>
     <input id="Group_Projects" asp-for="Group_Projects" />
